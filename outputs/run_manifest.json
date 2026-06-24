@@ -1,0 +1,158 @@
+{
+  "package": "aes_caiso_repro_package",
+  "version": "0.3.0",
+  "date_convention": "2026-01-01 00:00 through 2026-01-08 00:00 Pacific time = 168 hourly records, not 18 January",
+  "validation": {
+    "ok": true,
+    "files": {
+      "regions.csv": {
+        "exists": true,
+        "rows": 1,
+        "sha256": "23474197b7fbc624fae14f08d936568056f1903d7aae70de2da18a46cf6ac779",
+        "columns": [
+          "region_id",
+          "grid_operator",
+          "timezone",
+          "source_category"
+        ],
+        "missing_required": []
+      },
+      "grid_marginal_emissions.csv": {
+        "exists": true,
+        "rows": 168,
+        "sha256": "9900081e0d16f82b964cba8e2ef2285d72dd948b186f9e8550cde3ae0dcc25e2",
+        "columns": [
+          "region_id",
+          "timestamp_local",
+          "moer_g_co2e_kwh",
+          "source"
+        ],
+        "missing_required": [],
+        "timestamp_local_min": "2026-01-01 00:00:00",
+        "timestamp_local_max": "2026-01-07 23:00:00"
+      },
+      "grid_average_emissions.csv": {
+        "exists": true,
+        "rows": 1,
+        "sha256": "d150e55fa7a6e1613f77a6d4250fd2f1ee78452bb2022772f0f22485f2a1c267",
+        "columns": [
+          "region_id",
+          "average_g_co2e_kwh",
+          "source"
+        ],
+        "missing_required": []
+      },
+      "electricity_prices.csv": {
+        "exists": true,
+        "rows": 168,
+        "sha256": "a67e6ff6726ca3e51064b647bbad5cc738c99ffc7b6d88402cd17666fe51e1ba",
+        "columns": [
+          "region_id",
+          "timestamp_local",
+          "price_usd_kwh",
+          "tariff_name",
+          "source"
+        ],
+        "missing_required": [],
+        "timestamp_local_min": "2026-01-01 00:00:00",
+        "timestamp_local_max": "2026-01-07 23:00:00"
+      },
+      "liquid_fuel_lca.csv": {
+        "exists": true,
+        "rows": 3,
+        "sha256": "e1de1729ff498130112ca7152e2e5ab31dd8e0c389f4b2f006d50efdc18ed211",
+        "columns": [
+          "fuel_id",
+          "pathway_name",
+          "total_g_co2e_km",
+          "source_category",
+          "source"
+        ],
+        "missing_required": []
+      },
+      "fuel_prices.csv": {
+        "exists": true,
+        "rows": 336,
+        "sha256": "871ac4894ddbc41f1ddcebe1129779b48bb55c1141a8fc92ab1abac91bdd8648",
+        "columns": [
+          "fuel_id",
+          "timestamp_local",
+          "price_usd_km",
+          "source"
+        ],
+        "missing_required": [],
+        "timestamp_local_min": "2026-01-01 00:00:00",
+        "timestamp_local_max": "2026-01-07 23:00:00"
+      },
+      "vehicle_specs.csv": {
+        "exists": true,
+        "rows": 1,
+        "sha256": "12e15cffa5877b499f93a14d14a6824deafc6287b8c835574676e1bfdf0f1945",
+        "columns": [
+          "vehicle_id",
+          "powertrain",
+          "battery_kwh",
+          "electric_kwh_km",
+          "min_departure_soc",
+          "vehicle_prod_g_co2e_km",
+          "source_category"
+        ],
+        "missing_required": []
+      },
+      "scenarios.csv": {
+        "exists": true,
+        "rows": 1,
+        "sha256": "126195aa87ea274d1aae295c40c469c67bf8af54d0cfa29021992715af3d28e4",
+        "columns": [
+          "scenario_id",
+          "region_id",
+          "vehicle_id",
+          "w_carbon",
+          "w_cost",
+          "static_baseline_g_co2e_km"
+        ],
+        "missing_required": []
+      },
+      "service_events.csv": {
+        "exists": true,
+        "rows": 168,
+        "sha256": "1a9fe4f0bd12100c846a0cc84b6f8552cc6cc08ce89a1df38296069f7f192c7a",
+        "columns": [
+          "event_id",
+          "scenario_id",
+          "timestamp_local",
+          "distance_km",
+          "initial_soc"
+        ],
+        "missing_required": [],
+        "timestamp_local_min": "2026-01-01 00:00:00",
+        "timestamp_local_max": "2026-01-07 23:00:00"
+      },
+      "uncertainty_parameters.csv": {
+        "exists": true,
+        "rows": 7,
+        "sha256": "d4e06ce7efd2bfaeca27f87fb358211fb1c726b69a87caa62448002cada7730b",
+        "columns": [
+          "parameter",
+          "base_value",
+          "distribution",
+          "lower",
+          "mode",
+          "upper",
+          "cv",
+          "unit",
+          "source_category"
+        ],
+        "missing_required": []
+      }
+    },
+    "errors": [],
+    "warnings": [
+      "uncertainty_parameters.csv: required column lower contains missing values",
+      "uncertainty_parameters.csv: required column mode contains missing values",
+      "uncertainty_parameters.csv: required column upper contains missing values",
+      "uncertainty_parameters.csv: required column cv contains missing values"
+    ],
+    "common_dispatch_timestamps": 168
+  }
+}

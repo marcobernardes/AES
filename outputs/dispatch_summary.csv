@@ -1,0 +1,2 @@
+scenario_id,events,mean_aes_g_co2e_km_distance_weighted,static_baseline_g_co2e_km,reduction_percent,electric_fraction_events
+CAISO_PHEV_BALANCED,168,64.62958896967514,145.0,55.42786967608611,0.7083333333333334

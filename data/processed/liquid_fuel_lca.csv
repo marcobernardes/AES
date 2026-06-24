@@ -1,0 +1,4 @@
+fuel_id,pathway_name,total_g_co2e_km,source_category,source
+E85_CELLULOSIC,Cellulosic E85,95.0,scenario,GREET-style scenario value
+E85_CORN,Corn E85,224.0,scenario,scenario value
+E10,E10 gasoline blend,265.0,scenario,scenario value

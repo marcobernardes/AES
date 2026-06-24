@@ -1,0 +1,2 @@
+scenario_id,region_id,vehicle_id,w_carbon,w_cost,static_baseline_g_co2e_km
+CAISO_PHEV_BALANCED,CAISO,PHEV_REP,0.7,0.3,145.0

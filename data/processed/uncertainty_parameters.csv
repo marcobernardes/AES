@@ -1,0 +1,8 @@
+parameter,base_value,distribution,lower,mode,upper,cv,unit,source_category
+bev_energy_use_kwh_km,0.18,normal,0.05,,,0.1,kWh/km,scenario
+phev_electric_kwh_km,0.29,normal,0.05,,,0.1,kWh/km,scenario
+cellulosic_e85_g_km,95.0,triangular,70.0,95.0,125.0,,g CO2e/km,scenario
+caiso_grid_average_g_kwh,250.0,normal,0.0,,,0.15,g CO2e/kWh,source-derived
+battery_prod_kg_kwh,75.0,triangular,50.0,75.0,100.0,,kg CO2e/kWh,scenario
+vehicle_lifetime_km,240000.0,uniform,200000.0,,280000.0,,km,scenario
+equivalence_margin_g_km,25.0,fixed,,,,,g CO2e/km,declared margin

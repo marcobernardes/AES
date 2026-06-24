@@ -1,0 +1,2 @@
+vehicle_id,powertrain,battery_kwh,electric_kwh_km,min_departure_soc,vehicle_prod_g_co2e_km,source_category
+PHEV_REP,PHEV,14.0,0.29,0.2,0.0,scenario
